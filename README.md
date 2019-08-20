@@ -1,5 +1,5 @@
 # tensorflow-s530fn
-Tensorflow 1.14.1 build for Asus VivoBook S15 (X530FN_S530FN)
+Tensorflow 1.14.1 build for Asus VivoBook S15 (X530FN_S530FN). The whl file is created by following instructions found on https://www.tensorflow.org/install/source. 
 
 
 To install:
@@ -8,12 +8,13 @@ To install:
 pip install tensorflow-<version-tags>.whl
 ```
 
-lshw output
 
+#### Additional information
+
+lshw output
 ```bash
 sudo lshw | grep product
 ```
-
 ```
     product: VivoBook_ASUSLaptop X530FN_S530FN
        product: X530FN
@@ -53,20 +54,17 @@ sudo lshw | grep product
 ```
 
 NVIDIA and CUDA versions 
-
 ```bash
 nvidia-smi | grep Driver
 ```
-
 ```
 | NVIDIA-SMI 430.26       Driver Version: 430.26       CUDA Version: 10.2     |
 ```
-CUDNN version
 
+CUDNN version
 ```bash
 cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2
 ```
-
 ```
 #define CUDNN_MAJOR 7
 #define CUDNN_MINOR 6
@@ -81,7 +79,6 @@ TensorRT version
 ```bash
 dpkg -l | grep TensorRT
 ```
-
 ```
 ii  graphsurgeon-tf                                             5.0.2-1+cuda10.0                                amd64        GraphSurgeon for TensorRT package
 ii  libnvinfer-dev                                              5.0.2-1+cuda10.0                                amd64        TensorRT development libraries and headers
@@ -93,20 +90,10 @@ ii  tensorrt                                                    5.0.2.6-1+cuda10
 ii  uff-converter-tf                                            5.0.2-1+cuda10.0                                amd64        UFF converter for TensorRT package
 ```
 
-
+Python version
 ```bash
-
+python3 --version
 ```
-
 ```
-
-```
-
-
-```bash
-
-```
-
-```
-
+Python 3.6.8
 ```
