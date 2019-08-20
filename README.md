@@ -51,3 +51,62 @@ sudo lshw | grep product
              product: Intel Corporation
              product: Intel Corporation
 ```
+
+NVIDIA and CUDA versions 
+
+```bash
+nvidia-smi | grep Driver
+```
+
+```
+| NVIDIA-SMI 430.26       Driver Version: 430.26       CUDA Version: 10.2     |
+```
+CUDNN version
+
+```bash
+cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2
+```
+
+```
+#define CUDNN_MAJOR 7
+#define CUDNN_MINOR 6
+#define CUDNN_PATCHLEVEL 2
+--
+#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)
+
+#include "driver_types.h"
+```
+
+TensorRT version
+```bash
+dpkg -l | grep TensorRT
+```
+
+```
+ii  graphsurgeon-tf                                             5.0.2-1+cuda10.0                                amd64        GraphSurgeon for TensorRT package
+ii  libnvinfer-dev                                              5.0.2-1+cuda10.0                                amd64        TensorRT development libraries and headers
+ii  libnvinfer-samples                                          5.0.2-1+cuda10.0                                all          TensorRT samples and documentation
+ii  libnvinfer5                                                 5.0.2-1+cuda10.0                                amd64        TensorRT runtime libraries
+ii  python3-libnvinfer                                          5.0.2-1+cuda10.0                                amd64        Python 3 bindings for TensorRT
+ii  python3-libnvinfer-dev                                      5.0.2-1+cuda10.0                                amd64        Python 3 development package for TensorRT
+ii  tensorrt                                                    5.0.2.6-1+cuda10.0                              amd64        Meta package of TensorRT
+ii  uff-converter-tf                                            5.0.2-1+cuda10.0                                amd64        UFF converter for TensorRT package
+```
+
+
+```bash
+
+```
+
+```
+
+```
+
+
+```bash
+
+```
+
+```
+
+```
