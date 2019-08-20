@@ -1,11 +1,22 @@
 # tensorflow-s530fn
-Tensorflow 1.14.1 build for Asus VivoBook S15 (X530FN_S530FN). The whl file is created by following instructions found on https://www.tensorflow.org/install/source. 
+TensorFlow 1.14.1 build for Asus VivoBook S15 (X530FN_S530FN). The whl file is created by following instructions found on https://www.tensorflow.org/install/source. 
 
 
 To install:
 
 ```bash
 pip install tensorflow-<version-tags>.whl
+```
+
+
+To test your TensorFlow installa: 
+```bash
+# GPU
+python3 convolutional.py
+
+# CPU
+export CUDA_VISIBLE_DEVICES=""
+python3 convolutional.py
 ```
 
 
